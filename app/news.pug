@@ -1,0 +1,86 @@
+
+extends layouts/default
+
+block banner
+  #carousel-slider.carousel.slide(data-ride='carousel')
+    ol.carousel-indicators
+      li(data-target='#carousel-slider', data-slide-to='0')
+      li(data-target='#carousel-slider', data-slide-to='1')
+      li.active(data-target='#carousel-slider', data-slide-to='2')
+    .carousel-inner
+      .item
+        img.img-responsive(src='images/banner.jpg', alt='Banner')
+      .item
+        img.img-responsive(src='images/banner.jpg', alt='Banner')
+      .item.active
+        img.img-responsive(src='images/banner.jpg', alt='Banner')
+
+block content
+  .container-fluid
+    .row
+      .col-lg-9
+        .panel.panel-search-news
+          .panel-body
+            h3.text-center.title-blue búsqueda general
+            .row
+              .col-xs-12
+                form(action="")
+                  .panel.panel-blue
+                    .panel-body
+                      .row
+                        .form-group.col-xs-12
+                          label.sr-only(for="txtuser") Nombre o tag de la noticia
+                          input#txtuser.form-control(type="text", name="txtuser", placeholder="Ingresa el nombre o tag de la noticia")
+                        .form-group.col-xs-12.col-sm-12.col-md-6.col-lg-6
+                          label.sr-only(for="txtpassword") Fecha
+                          select.form-control
+                            option Ordena por fecha
+                            option option one
+                        .form-group.col-xs-12.col-sm-12.col-md-6.col-lg-6
+                          label.sr-only(for="txtpassword") Categoría
+                          select.form-control
+                            option Selecciona categoría
+                            option option one
+                  .form-group.text-right
+                    button.btn.btn-blue(type="submit") Realizar búsqueda
+                    br
+                    br
+                    br
+              each val in [1, 2, 3, 4, 5]
+                .col-xs-12.col-sm-6.col-md-6.col-lg-4
+                  article
+                    a(href='#')
+                      span.thumbnail
+                        img.img-responsive(src='images/news.png', alt='')
+                        img.mask-fluid-horizontal(src='images/mask_bottom.png', alt='')
+                      span.caption
+                        header
+                          h2 Fechas y Respuestas del proceso de Matrícula
+                          small Área / Dirección / Jefatura
+                          time(datetime='2016-05-29T03:46') 29.05.2016 03.46pm
+                  .clearfix
+              
+            nav.text-center(aria-label='Page navigation')
+              ul.pagination
+                li
+                  a(href='#', aria-label='Previous')
+                    i.fa.fa-angle-left.fa-lg(aria-hidden='true')
+                li
+                  a(href='#') 1
+                li
+                  a(href='#') 2
+                li
+                  a(href='#') 3
+                li
+                  a(href='#') 4
+                li
+                  a(href='#') 5
+                li
+                  a(href='#', aria-label='Next')
+                    i.fa.fa-angle-right.fa-lg(aria-hidden='true')
+
+      .col-lg-3
+        .panel
+          .panel-body
+            a.btn.btn-more.pull-right.hidden-xs(href='#', data-toggle='tooltip', data-placement='top', title='Ver más') +
+            h3.text-center.title-blue orgullo upc

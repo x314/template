@@ -6,8 +6,14 @@ $theme-primary:    #fed136;
 $theme-danger:     #e74c3c;
 
 $gray-base:        #000 !default;
-$gray-darker:	   lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:		   lighten($gray-base, 20%) !default;   // #333
-$gray:			   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:	   lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:	   lighten($gray-base, 93.5%) !default; // #eee
+$gray-darker:      lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:        lighten($gray-base, 20%) !default;   // #333
+$gray:             lighten($gray-base, 33.5%) !default; // #555
+$gray-light:       lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:     lighten($gray-base, 93.5%) !default; // #eee
+
+$blue-light:  #3396ff;
+$red:         #ff0000;
+$purple:      #7d5b9b;
+$paragraph:   #8a8a8a;
+$category:    #999999;

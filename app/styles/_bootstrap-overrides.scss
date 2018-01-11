@@ -1,20 +1,96 @@
 // Bootstrap overrides for this template
 
-.text-primary {
-    color: $theme-primary !important;
+.text-xs-left {
+  text-align: left;
+}
+.text-xs-right {
+  text-align: right;
+}
+.text-xs-center {
+  text-align: center;
+}
+.text-xs-justify {
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  .text-sm-left {
+    text-align: left;
+  }
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+  .text-sm-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 992px) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+  .text-md-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 1200px) {
+  .text-lg-left {
+    text-align: left;
+  }
+  .text-lg-right {
+    text-align: right;
+  }
+  .text-lg-center {
+    text-align: center;
+  }
+  .text-lg-justify {
+    text-align: justify;
+  }
 }
 
-.btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
-    @include heading-font;
-    font-weight: 700;
+.btn-more-news {
+  @include button-variant(white, black, black);
+  @include border-radius(0);
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'sgothic-rgcap';
 }
 
-.btn-xl {
-    @include button-variant(white, $theme-primary, $theme-primary);
-    @include heading-font;
-    font-weight: 700;
-    border-radius: 3px;
-    font-size: 18px;
-    padding: 20px 40px;
+.btn-black {
+  @include button-variant(white, black, black);
+  @include border-radius(0);
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: 'sgothic-bdcap';
+}
+
+.btn-blue {
+  @include button-variant(white, #3396ff, #3396ff);
+  @include border-radius(0);
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: 'sgothic-bdcap';
+}
+
+.pagination {
+  > li {
+    a, 
+    span {
+      border: none;
+      font-size: 18px;
+      font-family: 'sgothic-bdcap';
+      color: #838486;
+      &:hover {
+        background: inherit;
+        color: red !important;
+      }
+    }
+  }
 }

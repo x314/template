@@ -1,5 +1,16 @@
 // Styling for the footer
 
 footer {
+  background-color: white;
+  padding: 30px 0;
+  color: #969496;
+  a {
+  	color: #969496;
+  }
+}
 
+.vertical-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

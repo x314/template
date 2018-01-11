@@ -1,11 +1,11 @@
 
 doctype html
-html.no-js(lang='')
+html.no-js(lang='es', ltr='ltr')
   head
     meta(charset='utf-8')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Template
+    title Conéctate
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     // Place favicon.ico in the root directory
 
@@ -26,13 +26,83 @@ html.no-js(lang='')
       p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     <![endif]-->
 
-    section.container
-      header
+    .wrapper-navbar-default
 
+    nav.navbar.navbar-static-top(role='navigation', style='margin-bottom: 0')
+      .navbar-header
+        button#click-a.navbar-toggle.pull-left(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='index.html') 
+          span
+            img(src="images/isotipo_white_upc.png", alt="UPC")
+          | &nbsp; conéctate 2.0
+        .pull-right.text-center.hidden-sm.hidden-md.hidden-lg(style="color: white; line-height: 75px; padding-right: 10px;")
+          i.fa.fa-map-marker.fa-lg(aria-hidden='true')
+          | &nbsp; Lima Central Tower 
+      // /.navbar-header
+      ul.nav.navbar-top-links.pull-right.hidden-xs
+        li
+          a(href='#') Presupuestos
+        li
+          a(href='#') Smartnet
+        li
+          a(href='#') People Soft
+        li
+          a(href='#') Solicitudes DI2D
+        li
+          a(href='#') Contratos
+        li
+          a(href='#') Seguridad Corporativa
+      // /.navbar-top-links
+      .navbar-default.sidebar(role='navigation')
+        .user-panel
+          .image
+            img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+          .info
+            p Hola 
+            p Alex Armando 
+            p.hidden-xs
+              | Lima Central Tower 
+              i.fa.fa-map-marker.fa-lg(aria-hidden='true')
+            a.btn-block(href='#') Cerrar sesión
+          .clearfix
+        .sidebar-nav
+          ul#side-menu.nav.in
+            li.active
+              a(href='./')
+                span.icon.icon-home
+                |  Inicio
+            li
+              a(href='news.html')
+                span.icon.icon-news
+                |  Noticias
+            li
+              a(href='#')
+                span.icon.icon-directory
+                |  Directorio
+            li
+              a(href='#')
+                span.icon.icon-upc-family
+                |  Celebra
+            li
+              a(href='#')
+                span.icon.icon-adn
+                |  Nuestro ADN
+            li
+              a(href='#')
+                span.icon.icon-channel
+                |  Canal
+        // /.sidebar-collapse
+      // /.navbar-static-side
+
+    #banner-wrapper
+      block banner
+
+    main#page-wrapper
       block content
-
-      footer
-        p &hearts; from the UPC team
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
@@ -67,5 +137,4 @@ html.no-js(lang='')
 
     // build:js scripts/main.js
     script(src='scripts/main.js')
-    script(src='scripts/other.js')
     // endbuild

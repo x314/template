@@ -1,7 +1,262 @@
 
 extends layouts/default
 
+block banner
+  #carousel-slider.carousel.slide(data-ride='carousel')
+    ol.carousel-indicators
+      li(data-target='#carousel-slider', data-slide-to='0')
+      li(data-target='#carousel-slider', data-slide-to='1')
+      li.active(data-target='#carousel-slider', data-slide-to='2')
+    .carousel-inner
+      .item
+        img.img-responsive(src='images/banner.jpg', alt='Banner')
+      .item
+        img.img-responsive(src='images/banner.jpg', alt='Banner')
+      .item.active
+        img.img-responsive(src='images/banner.jpg', alt='Banner')
+
 block content
-  .jumbotron
-    h1 Splendid!
-    p.lead Always a pleasure scaffolding your apps.
+  .container-fluid
+    .row
+      .col-lg-12
+        .panel.panel-news
+          .panel-body
+            a.btn.btn-more.pull-right.hidden-xs(href='#', data-toggle='tooltip', data-placement='top', title='Ver más') +
+            h3.text-center lo último
+            .row
+              .col-lg-8(style='border-right: 1px solid #e0e0e0;')
+                .panel.panel-main-news
+                  article
+                    a(href='#')
+                      .row
+                        .col-sm-6.col-md-6.col-lg-7
+                          .thumbnail
+                            img.img-responsive(src='images/news.png', alt='')
+                            img.mask-fluid-vertical(src='images/mask_right.png', alt='')
+                        .col-sm-6.col-md-6.col-lg-5.caption
+                          header
+                            time(datetime='2016-05-29T03:46')
+                              span.badge 1
+                              |    29.05.2016 03.46pm
+                            h2 ¡Participa de Trascender UPC 2018! Proyecto Social Corporativo
+                            small Área / Dirección / Jefatura
+                          p
+                            | Esta es nuestra oportunidad para contribuir con la transformación de la educación de los niños del colegio público Santa María de Maranga, vecinos de nuestro campus San Miguel.
+                    //- .clearfix
+              .col-lg-4
+                #panel-carousel-news.carousel.slide.multi-item-carousel(data-ride='carousel')
+                  .carousel-inner
+                    .item.active
+                      .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                        article
+                          a(href='#')
+                            span.thumbnail
+                              img.img-responsive(src='images/news.png', alt='')
+                              img.mask-fluid-horizontal(src='images/mask_bottom.png', alt='')
+                            span.caption
+                              header
+                                h2 Fechas y Respuestas del proceso de Matrícula
+                                small Área / Dirección / Jefatura
+                                time(datetime='2016-05-29T03:46') 29.05.2016 03.46pm
+                          .clearfix
+                    .item
+                      .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                        article
+                          a(href='#')
+                            span.thumbnail
+                              img.img-responsive(src='images/news.png', alt='')
+                              img.mask-fluid-horizontal(src='images/mask_bottom.png', alt='')
+                            span.caption
+                              header
+                                h2 Workshop: Creatividad Empresarial 2017
+                                small Área / Dirección / Jefatura
+                                time(datetime='2016-05-29T03:46') 29.05.2016 03.46pm
+                          .clearfix
+                    .item
+                      .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                        article
+                          a(href='#')
+                            span.thumbnail
+                              img.img-responsive(src='images/news.png', alt='')
+                              img.mask-fluid-horizontal(src='images/mask_bottom.png', alt='')
+                            span.caption
+                              header
+                                h2 News 03
+                                small Área / Dirección / Jefatura
+                                time(datetime='2016-05-29T03:46') 29.05.2016 03.46pm
+                          .clearfix
+                  a.left.carousel-control(href='#panel-carousel-news', data-slide='prev')
+                    i.fa.fa-angle-left.fa-lg(aria-hidden='true')
+                  a.right.carousel-control(href='#panel-carousel-news', data-slide='next')
+                    i.fa.fa-angle-right.fa-lg(aria-hidden='true')
+            a.btn.btn-more-news.btn-block.hidden-sm.hidden-md.hidden-lg(href="#") leer más noticias
+      .col-lg-8
+        .panel.panel-development
+          .panel-body
+            a.btn.btn-more.pull-right.hidden-xs(href='#', data-toggle='tooltip', data-placement='top', title='Ver más') +
+            h3.text-center.title-blue mi desarrollo
+            .row
+              .col-sm-6.col-md-6.col-lg-6
+                .panel.panel-job
+                  .panel-body
+                    h4.text-center.title-red buscamos tu talento
+                    a(href='#')
+                      img.img-fluid(src='images/oportunidades-laborales.jpg', alt='Oportunidades Laborales')
+              .col-sm-6.col-md-6.col-lg-6
+                .panel.panel-process
+                  .panel-body
+                    .row
+                      a(href='#')
+                        span.col-xs-12.col-sm-12.col-md-7.col-lg-7
+                          img.img-responsive(src='images/process.png', alt='Proceso de Gestión de Desempeño')
+                        span.col-xs-12.col-sm-12.col-md-5.col-lg-5.text-xs-center.text-md-right
+                          | Proceso de Gestión de Desempeño
+                  a.btn.btn-block.btn-evaluation(href='#')
+                    | Guía de Evaluación de Fin de Año &nbsp;
+                    i.fa.fa-caret-right.fa-lg(aria-hidden='true')
+                  a.btn.btn-block.btn-success(href='#')
+                    | Ingresar al Success Factors &nbsp;
+                    i.fa.fa-caret-right.fa-lg(aria-hidden='true')
+                .panel.panel-learn
+                  h4.text-center.title-purple aprende upc
+                  .row
+                    .col-xs-12.col-sm-12.col-md-8.col-lg-8
+                      ul
+                        li
+                          a(href='#') Beneficios de Capacitación
+                        li
+                          a(href='#') Solicitud de Capacitación UPC
+                        li
+                          a(href='#')
+                            | Acceso a Harvard Management Mentor 
+                            small (ex plataforma Gold)
+                    .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                      img.img-responsive(src='images/certified.png', alt='Aprende UPC')
+      .col-lg-4
+        .panel.panel-birthday
+          .panel-body
+            h3.text-center.title-blue cumpleaños
+            div(role='tabpanel')
+              // Nav tabs
+              ul.nav.nav-justified(role='tablist')
+                li(role='presentation')
+                  a(href='#home', aria-controls='home', role='tab', data-toggle='tab') ayer
+                li.active(role='presentation')
+                  a(href='#tab', aria-controls='tab', role='tab', data-toggle='tab') hoy
+                li(role='presentation')
+                  a(href='#tab', aria-controls='tab', role='tab', data-toggle='tab') mañana
+                li(role='presentation')
+                  a(href='#tab', aria-controls='tab', role='tab', data-toggle='tab') mes
+              // Tab panes
+              .tab-content
+                table.table.table-striped
+                  tbody
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+                    tr
+                      td
+                        a(href='#')
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                      td
+                        a(href='#')
+                          strong Villanueva Mercado
+                          span Alex
+                        span Anexo 2916
+                      td
+                        a.btn.btn-block.btn-evaluation(href='#')
+                          i.fa.fa-gift.fa-lg(aria-hidden='true')
+            a.btn.btn-more-news.btn-block.hidden-lg(href="#") ver más cumpleaños
