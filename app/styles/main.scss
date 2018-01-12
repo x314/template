@@ -176,6 +176,10 @@ main#page-wrapper {
   @media (min-width: 1200px) {
     margin: 0;
   }
+  h1 {
+    margin: 0;
+    font-weight: bold;
+  }
   article {
     header {
       border-bottom: 1px solid #eeeeee;
@@ -198,6 +202,23 @@ main#page-wrapper {
     p {
       color: #8a8a8a;
       margin: 0;
+    }
+    .likes {
+      border-top: 1px solid #eeeeee;
+      margin: 0 15px;
+      padding: 20px 0;
+      i {
+        color: $red;
+      }
+    }
+    .tags {
+      margin: 0 15px;
+      .label-danger {
+        background-color: $red;
+        @include border-radius(0);
+        font-size: 16px;
+        margin-right: 4px;
+      }
     }
   }
 }

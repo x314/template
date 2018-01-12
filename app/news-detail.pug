@@ -1,0 +1,61 @@
+
+extends layouts/default
+
+block banner
+  //- #carousel-slider.carousel.slide(data-ride='carousel')
+  //-   ol.carousel-indicators
+  //-     li(data-target='#carousel-slider', data-slide-to='0')
+  //-     li(data-target='#carousel-slider', data-slide-to='1')
+  //-     li.active(data-target='#carousel-slider', data-slide-to='2')
+  //-   .carousel-inner
+  //-     .item
+  //-       img.img-responsive(src='images/banner.jpg', alt='Banner')
+  //-     .item
+  //-       img.img-responsive(src='images/banner.jpg', alt='Banner')
+  //-     .item.active
+  //-       img.img-responsive(src='images/banner.jpg', alt='Banner')
+
+block content
+  .container-fluid
+    .row
+      .col-lg-9
+        .panel.panel-main-news
+          .panel-body
+            h3.text-center conéctate informa
+            .row
+              .col-xs-12
+                article
+                  .row
+                    .col-xs-12.col-md-6(style="background-color: white;")
+                      .thumbnail
+                        img.img-responsive(src='images/news.png', alt='')
+                        img.mask-fluid-vertical(src='images/mask_right.png', alt='')
+                    .caption(style="padding: 0 15px;")
+                      header
+                        time(datetime='2016-05-29T03:46')
+                          span.badge 1
+                          | &nbsp; 29.05.2016 03.46pm
+                        h1 Fechas y Respuestas del proceso de Matrícula
+                        small Área / Dirección / Jefatura
+                      p.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vel, corporis molestiae totam odit enim, eos ex labore temporibus aperiam, nulla. Nulla, voluptas, odit distinctio unde magnam saepe quo neque.
+                      p.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vel, corporis molestiae totam odit enim, eos ex labore temporibus aperiam, nulla. Nulla, voluptas, odit distinctio unde magnam saepe quo neque.
+                      p.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vel, corporis molestiae totam odit enim, eos ex labore temporibus aperiam, nulla. Nulla, voluptas, odit distinctio unde magnam saepe quo neque.
+                      p.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vel, corporis molestiae totam odit enim, eos ex labore temporibus aperiam, nulla. Nulla, voluptas, odit distinctio unde magnam saepe quo neque.
+                      p.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vel, corporis molestiae totam odit enim, eos ex labore temporibus aperiam, nulla. Nulla, voluptas, odit distinctio unde magnam saepe quo neque.
+                      br
+                      br
+                    .likes.text-right
+                      span #0
+                      | &nbsp;
+                      i.fa.fa-heart-o.fa-2x(aria-hidden='true')
+
+                    .tags
+                      h5 Etiquetas
+                      span.label.label-danger Etiqueta 1
+                      span.label.label-danger Etiqueta 2
+
+      .col-lg-3
+        .panel
+          .panel-body
+            a.btn.btn-more.pull-right.hidden-xs(href='#', data-toggle='tooltip', data-placement='top', title='Ver más') +
+            h3.text-center.title-blue orgullo upc
