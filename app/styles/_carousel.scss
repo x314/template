@@ -19,6 +19,11 @@
       display: inline-block;
     }
   }
+  &:hover, 
+  &:active, 
+  &:focus {
+    color: inherit;
+  }
 }
 
 .carousel-indicators {
@@ -39,6 +44,11 @@
     bottom: 16px;
   }
 
+}
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img {
+  width: 100%;
 }
 
 .multi-item-carousel {

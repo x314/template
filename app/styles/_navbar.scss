@@ -50,6 +50,7 @@
   height: 100%;
   z-index: 1;
   top: 0;
+  bottom: 0;
 
   @media (min-width: 768px) {
     /*position: fixed;*/
@@ -103,6 +104,11 @@ nav.navbar {
         line-height: 40px;
         @media (min-width: 992px) {
           font-size: 20px;
+        }
+        &:hover, 
+        &:active, 
+        &:focus {
+          background-color: inherit;
         }
       }
     }

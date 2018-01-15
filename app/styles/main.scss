@@ -126,7 +126,7 @@ main#page-wrapper {
 
 #banner-wrapper {
   background-color: black;
-  height: 250px;
+  // height: 250px;
 }
 
 @media (min-width: 768px) {
@@ -135,7 +135,7 @@ main#page-wrapper {
     margin: 0 0 0 145px;
   }
   #banner-wrapper {
-    max-height: 240px;
+    // max-height: 240px;
     overflow: hidden;
   }
 }

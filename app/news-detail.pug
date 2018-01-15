@@ -2,18 +2,17 @@
 extends layouts/default
 
 block banner
-  //- #carousel-slider.carousel.slide(data-ride='carousel')
-  //-   ol.carousel-indicators
-  //-     li(data-target='#carousel-slider', data-slide-to='0')
-  //-     li(data-target='#carousel-slider', data-slide-to='1')
-  //-     li.active(data-target='#carousel-slider', data-slide-to='2')
-  //-   .carousel-inner
-  //-     .item
-  //-       img.img-responsive(src='images/banner.jpg', alt='Banner')
-  //-     .item
-  //-       img.img-responsive(src='images/banner.jpg', alt='Banner')
-  //-     .item.active
-  //-       img.img-responsive(src='images/banner.jpg', alt='Banner')
+  #carousel-slider.carousel.slide(data-ride='carousel')
+    ol.carousel-indicators
+      //- li(data-target='#carousel-slider', data-slide-to='0')
+      li.active(data-target='#carousel-slider', data-slide-to='1')
+    .carousel-inner
+      //- .item
+      //-   img.img-responsive(src='images/banner-1200.jpg', alt='Banner')
+      .item.active
+        img.img-responsive.hidden-xs.hidden-sm(src='images/banners-trascender_escritorio.png', alt='Banner')
+        img.img-responsive.hidden-xs.hidden-md.hidden-lg(src='images/banners-trascender_tablet.png', alt='Banner')
+        img.img-responsive.hidden-sm.hidden-md.hidden-lg(src='images/banners-trascender_movil.png', alt='Banner')
 
 block content
   .container-fluid
@@ -59,3 +58,56 @@ block content
           .panel-body
             a.btn.btn-more.pull-right.hidden-xs(href='#', data-toggle='tooltip', data-placement='top', title='Ver más') +
             h3.text-center.title-blue orgullo upc
+            .row
+              .col-xs-12
+                //- #panel-carousel-news.carousel.slide.multi-item-carousel(data-ride='carousel')
+                #panel-carousel-news.carousel.slide(data-ride='carousel')
+                  .carousel-inner
+                    .item.active
+                      .col-xs-12
+                        article
+                          a(href='news-detail.html')
+                            span.thumbnail
+                              img.img-responsive(src='images/news.png', alt='')
+                              img.mask-fluid-horizontal(src='images/mask_bottom.png', alt='')
+                            span.caption
+                              header
+                                h2 Fechas y Respuestas del proceso de Matrícula
+                                small Área / Dirección / Jefatura
+                                time(datetime='2016-05-29T03:46') 29.05.2016 03.46pm
+                          .clearfix
+                    .item
+                      .col-xs-12
+                        article
+                          a(href='news-detail.html')
+                            span.thumbnail
+                              img.img-responsive(src='images/news.png', alt='')
+                              img.mask-fluid-horizontal(src='images/mask_bottom.png', alt='')
+                            span.caption
+                              header
+                                h2 Workshop: Creatividad Empresarial 2017
+                                small Área / Dirección / Jefatura
+                                time(datetime='2016-05-29T03:46') 29.05.2016 03.46pm
+                          .clearfix
+                  a.left.carousel-control(href='#panel-carousel-news', data-slide='prev')
+                    i.fa.fa-angle-left.fa-lg(aria-hidden='true')
+                  a.right.carousel-control(href='#panel-carousel-news', data-slide='next')
+                    i.fa.fa-angle-right.fa-lg(aria-hidden='true')
+
+        .panel.panel-main-news
+          .panel-body
+            a.btn.btn-more.pull-right.hidden-xs(href='#', data-toggle='tooltip', data-placement='top', title='Ver más') +
+            h3.text-center.title-blue orgullo upc
+            .row
+              .col-xs-12
+                article
+                  a(href='news-detail.html')
+                    span.thumbnail
+                      img.img-responsive(src='images/news.png', alt='')
+                      img.mask-fluid-horizontal(src='images/mask_bottom.png', alt='')
+                    span.caption
+                      header
+                        h2 Fechas y Respuestas del proceso de Matrícula
+                        small Área / Dirección / Jefatura
+                        time(datetime='2016-05-29T03:46') 29.05.2016 03.46pm
+                  .clearfix
