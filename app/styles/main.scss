@@ -48,6 +48,9 @@
 .panel-blue {
   background-color: #f4f9ff;
 }
+.panel-transparent {
+  background-color: transparent;
+}
 h3, 
 h4 {
   font-size: 17px;
@@ -127,12 +130,26 @@ main#page-wrapper {
 #banner-wrapper {
   background-color: black;
   // height: 250px;
+  position: relative;
+  h2 {
+    position: absolute;
+    line-height: 240px;
+    top: 0;
+    color: white;
+    left: 15%;
+  }
+  > a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+  }
 }
 
 @media (min-width: 768px) {
   #banner-wrapper, main#page-wrapper {
     position: inherit;
-    margin: 0 0 0 145px;
+    margin: 0 0 0 105px;
   }
   #banner-wrapper {
     // max-height: 240px;

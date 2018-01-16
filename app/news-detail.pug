@@ -2,17 +2,8 @@
 extends layouts/default
 
 block banner
-  #carousel-slider.carousel.slide(data-ride='carousel')
-    ol.carousel-indicators
-      //- li(data-target='#carousel-slider', data-slide-to='0')
-      li.active(data-target='#carousel-slider', data-slide-to='1')
-    .carousel-inner
-      //- .item
-      //-   img.img-responsive(src='images/banner-1200.jpg', alt='Banner')
-      .item.active
-        img.img-responsive.hidden-xs.hidden-sm(src='images/banners-trascender_escritorio.png', alt='Banner')
-        img.img-responsive.hidden-xs.hidden-md.hidden-lg(src='images/banners-trascender_tablet.png', alt='Banner')
-        img.img-responsive.hidden-sm.hidden-md.hidden-lg(src='images/banners-trascender_movil.png', alt='Banner')
+  img.img-responsive(src='images/banner-noticias.jpg', alt='Noticias')
+  h2 Noticias
 
 block content
   .container-fluid

@@ -1,0 +1,34 @@
+
+extends layouts/default
+
+block banner
+  img.img-responsive(src='images/banner-noticias.jpg', alt='Noticias')
+  h2 Mi Perfil
+
+block content
+  .container-fluid
+    .row
+      .col-lg-7
+        .panel.panel-transparent
+          .panel-body
+            .card.card-profile.mb-4
+              .card-body.text-center
+                a(href='profile/index.html')
+                  img.card-profile-img(src='assets/img/avatar-dhg.png')
+                h6.card-title
+                  a.text-inherit(href='profile/index.html') Alex Villanueva Mercado
+                p.mb-4 Analista de experiencia digital
+                p.mb-4 alex.villanueva@upc.pe
+                ul.card-menu
+                  li.card-menu-item
+                    a.text-inherit(href='#userModal', data-toggle='modal')
+                      | Friends
+                      h6.my-0 12M
+                  li.card-menu-item
+                    a.text-inherit(href='#userModal', data-toggle='modal')
+                      | Enemies
+                      h6.my-0 1
+      
+      .col-lg-5
+        .panel
+          .panel-body
