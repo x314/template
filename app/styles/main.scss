@@ -138,18 +138,79 @@ main#page-wrapper {
     color: white;
     left: 15%;
   }
-  > a {
+  .direct-access {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: black;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    @media (min-width: 992px) {
+      top: inherit;
+      right: 0;
+      bottom: 0;
+      z-index: 16;
+      // width: 70%;
+      height: 145px;
+    }
+    > a {
+      @include alpha-background-color(rgba(black, 0.5), black);
+      padding: 37px 24.5px;
+    }
+    .owl-carousel {
+      @include alpha-background-color(rgba(black, 0.5), black);
+      display: none;
+      // visibility: hidden;
+      color: white;
+      padding: 24px 24.5px 23px 24.5px;
+      // bottom: -145px;
+      height: 145px;
+      border: 1px solid #727272;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      @media (min-width: 992px) {
+        // max-width: 87%;
+        width: 740px;
+      }
+    }
+    .owl-stage-outer {
+      @include translate(0%, 50%);
+      position: absolute;
+      width: 100%;
+      @media (min-width: 992px) {
+        @include translate(0%, 0%);
+      }
+    }
+    .owl-theme .owl-nav [class*='owl-'] {
+      background-image: url(../images/sprite-acdirect.png);
+      width: 23px;
+      height: 39px;
+      font-size: 0;
+      @media (min-width: 992px) {
+        margin: -12% 5px 0 5px;
+      }
+    }
+    .owl-item {
+      text-align: center;
+      a {
+        color: white;
+      }
+    }
+    img {
+      margin: 0 auto;
+    }
+    p {
+      margin: 0;
+      line-height: 100%;
+    }
   }
 }
 
 @media (min-width: 768px) {
   #banner-wrapper, main#page-wrapper {
-    position: inherit;
-    margin: 0 0 0 105px;
+    // position: inherit;
+    margin: 0 0 0 130px;
   }
   #banner-wrapper {
     // max-height: 240px;

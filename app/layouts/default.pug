@@ -11,6 +11,8 @@ html.no-js(lang='es', ltr='ltr')
 
     // build:css styles/vendor.css
     // bower:css
+    link(rel='stylesheet', href='/bower_components/owl.carousel/dist/assets/owl.carousel.css')
+    link(rel='stylesheet', href='/bower_components/owl.carousel/dist/assets/owl.theme.default.css')
     // endbower
     // endbuild
 
@@ -63,13 +65,13 @@ html.no-js(lang='es', ltr='ltr')
             a(href="#")
               img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
           .info
-            p Hola 
             p Alex Armando 
+            a.btn-block(href='login.html') Cerrar sesión
             p.hidden-xs
               | Lima Central Tower 
               i.fa.fa-map-marker.fa-lg(aria-hidden='true')
-            a.btn-block(href='login.html') Cerrar sesión
           .clearfix
+        br
         .sidebar-nav
           ul#side-menu.nav.in
             li.active
@@ -100,8 +102,46 @@ html.no-js(lang='es', ltr='ltr')
       // /.navbar-static-side
 
     #banner-wrapper
-      a(href="#")
-        img(src="images/icon-direct-access.png", alt="Accesos directos")
+      .direct-access
+        .owl-carousel.owl-theme.pull-right
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Portal UPC
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Portal UPC
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Portal UPC
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Presupuestos
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Solicitudes DI2D
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Contratos
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Seguridad corporativa
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Workplace
+          div
+            a(href="#", target="_blank")
+              img(src="images/portal.png", alt="")
+              p Onbase
+        a.pull-right(href="#")
+          img(src="images/icon-direct-access.png", alt="Accesos directos")
       block banner
 
     main#page-wrapper
@@ -120,6 +160,7 @@ html.no-js(lang='es', ltr='ltr')
     // bower:js
     script(src='/bower_components/jquery/dist/jquery.js')
     script(src='/bower_components/modernizr/modernizr.js')
+    script(src='/bower_components/owl.carousel/dist/owl.carousel.js')
     // endbower
     // endbuild
 

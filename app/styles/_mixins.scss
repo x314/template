@@ -87,6 +87,20 @@
   }
 }
 
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color;
+  background-color: $color;
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+
 // Font Mixins
 // @mixin serif-font {
 //   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;

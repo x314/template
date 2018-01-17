@@ -34,7 +34,7 @@
 
   @media (min-width: 768px) {
     top: 40px;
-    width: 105px;
+    width: 130px;
     /*position: initial;*/
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
@@ -135,14 +135,14 @@ nav.navbar {
     }
     .image {
       width: 42%;
-      height: 84px;
+      // height: 84px;
       /*margin: 0 auto;*/
       /*margin-right: 10%;*/
       img {
         border: 2px solid #fff;
         width: 74%;
         @media (min-width: 768px) {
-          width: 84px;
+          width: 60px;
           margin: 0 auto;
         }
       }
@@ -150,7 +150,7 @@ nav.navbar {
     .info {
       width: 58%;
       > p {
-        margin: initial;
+        margin: 8px 0;
         line-height: 100%;
         @media (min-width: 768px) {
           font-size: 16px !important;
@@ -192,11 +192,11 @@ nav.navbar {
           background-image: url('../images/nav-sprite.png');
           display: inline-block;
           margin-right: 21%;
-          width: 40px;
-          height: 40px;
+          width: 35px;
+          height: 35px;
           @media (min-width: 768px) {
             display: block;
-            margin: 0 auto 15px auto;
+            margin: 0 auto 5px auto;
           }
           &.icon-home {
             background-position: 0px 0px;
@@ -264,7 +264,7 @@ nav.navbar {
         font-size: 16px;
         padding: 0 0 0 14px;
         @media (min-width: 768px) {
-          padding: 30px 0 15px 0;
+          padding: 14px  0;
           text-align: center;
           line-height: 100%;
         }

@@ -2,6 +2,23 @@ $(document).ready ->
 
   $('[data-toggle="tooltip"]').tooltip()
 
+  $('.owl-carousel').owlCarousel({
+    # loop:true,
+    margin: 30,
+    nav: true,
+    responsive: {
+      0: {
+        items: 3
+      },
+      768: {
+        items: 4
+      },
+      992: {
+        items: 6
+      }
+    }
+  })
+
   $('#click-a').on 'click', ->
     # $containernav = $('.container-nav');
     # $nav = $('.nav');
@@ -32,6 +49,13 @@ $(document).ready ->
           'height': window.innerHeight - $nav.height() - $bannerwrapper.height()
           'overflow': 'hidden'
 
+    false
+
+  $('#banner-wrapper > .direct-access > a').on 'click', ->
+    if $('.direct-access .owl-carousel').is(":visible")
+      $('.direct-access .owl-carousel').fadeOut 'slow'
+    else
+      $('.direct-access .owl-carousel').fadeIn 'fast'
     false
 
   # Instantiate the Bootstrap carousel
