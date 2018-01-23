@@ -68,6 +68,12 @@ h4 {
 .title-purple {
   color: $purple;
 }
+.w-absolute {
+  width: 100% !important;
+}
+.hidden {
+  display: none !important;
+}
 
 // Main
 #login-wrapper {
@@ -141,10 +147,15 @@ main#page-wrapper {
   .direct-access {
     position: absolute;
     top: 0;
-    width: 100%;
+    // width: 100%;
+    width: 40%;
     height: 100%;
     overflow: hidden;
-    z-index: 1;
+    z-index: 16;
+    right: 0;
+    @media (min-width: 768px) {
+      width: auto;
+    }
     @media (min-width: 992px) {
       top: inherit;
       right: 0;
@@ -153,32 +164,64 @@ main#page-wrapper {
       // width: 70%;
       height: 145px;
     }
-    > a {
+    a.btn {
       @include alpha-background-color(rgba(black, 0.5), black);
-      padding: 37px 24.5px;
+      padding: 37px 24px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @media (min-width: 768px) {
+        position: static;
+      }
+    }
+    a.btn-close {
+      position: absolute;
+      top: 1%;
+      right: 1%;
+      display: none;
+      z-index: 1;
+      background: transparent url('../images/close_access.png') center no-repeat;
+      width: 30px;
+      height: 30px;
+    }
+    .wrapper-owl-carousel {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      @media (min-width: 768px) {
+        width: 0;
+        height: 145px;
+        display: block;
+      }
     }
     .owl-carousel {
       @include alpha-background-color(rgba(black, 0.5), black);
-      display: none;
-      // visibility: hidden;
+      // @include box-sizing(border-box);
+      // display: none;
+      // opacity: 0;
       color: white;
-      padding: 24px 24.5px 23px 24.5px;
+      padding: 24px 24px 23px 24px;
       // bottom: -145px;
-      height: 145px;
+      // height: 145px;
       border: 1px solid #727272;
       width: 100%;
       height: 100%;
-      overflow: hidden;
-      @media (min-width: 992px) {
+      // overflow: hidden;
+      @media (min-width: 768px) {
         // max-width: 87%;
+        // width: 525px;
+        opacity: 1;
+      }
+      @media (min-width: 1200px) {
         width: 740px;
+        overflow: hidden;
       }
     }
     .owl-stage-outer {
       @include translate(0%, 50%);
       position: absolute;
       width: 100%;
-      @media (min-width: 992px) {
+      @media (min-width: 768px) {
         @include translate(0%, 0%);
       }
     }
@@ -188,7 +231,7 @@ main#page-wrapper {
       height: 39px;
       font-size: 0;
       @media (min-width: 992px) {
-        margin: -12% 5px 0 5px;
+        // margin: -12% 5px 0 5px;
       }
     }
     .owl-item {
