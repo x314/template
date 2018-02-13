@@ -31,47 +31,155 @@ html.no-js(lang='es', ltr='ltr')
     .wrapper-navbar-default
 
     nav.navbar.navbar-static-top(role='navigation', style='margin-bottom: 0')
-      .navbar-header
+      .navbar-header.hidden-md.hidden-lg
         button#click-a.navbar-toggle.pull-left(type='button', data-toggle='collapse', data-target='.navbar-collapse')
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand(href='index.html') 
+        a.navbar-brand.pull-right.hidden-sm(href='./') 
           span
             img(src="images/isotipo_white_upc.png", alt="UPC")
-          | &nbsp; conéctate 2.0
-        .pull-right.text-center.hidden-sm.hidden-md.hidden-lg(style="color: white; line-height: 75px; padding-right: 10px;")
-          i.fa.fa-map-marker.fa-lg(aria-hidden='true')
-          | &nbsp; Lima Central Tower 
+          //- | &nbsp; conéctate 2.0
+        //- .pull-right.text-center.hidden-sm.hidden-md.hidden-lg(style="color: white; line-height: 75px; padding-right: 10px;")
+        //-   i.fa.fa-map-marker.fa-lg(aria-hidden='true')
+        //-   | &nbsp; Lima Central Tower 
       // /.navbar-header
-      ul.nav.navbar-top-links.pull-right.hidden-xs
-        li
-          a(href='#') Presupuestos
-        li
-          a(href='#') Smartnet
-        li
-          a(href='#') People Soft
-        li
-          a(href='#') Solicitudes DI2D
-        li
-          a(href='#') Contratos
-        li
-          a(href='#') Seguridad Corporativa
+
+      .nav.navbar-top-links
+        h2.pull-left conéctate 2.0
+        //- ul.nav.navbar-top-links.pull-right
+        ul.pull-right
+          li
+            .dropdown
+              button#dropdownMenuAccess.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                i.fa.fa-bolt.fa-2x(aria-hidden='true')
+              ul.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuAccess')
+                li.dropdown-header Accesos Directos
+                li.divider(role='separator')
+                li.xs-pt-10
+                  .col-xs-4.col-sm-3.text-center.xs-pb-10
+                    a(href="#")
+                      img.img-responsive.img-circle(src='images/accesos-directos/seguridad.png', alt='Seguridad Corporativa')
+                      span Seguridad Corporativa
+                  .col-xs-4.col-sm-3.text-center.xs-pb-10
+                    a(href="#")
+                      img.img-responsive.img-circle(src='images/accesos-directos/solicitudes.png', alt='Sistema de Solicitudes')
+                      span Sistema de Solicitudes
+                  .col-xs-4.col-sm-3.text-center.xs-pb-10
+                    a(href="#")
+                      img.img-responsive.img-circle(src='images/accesos-directos/peoplesoft.png', alt='PeopleSoft')
+                      span PeopleSoft
+                  .clearfix.hidden-sm.hidden-md.hidden-lg
+                  .col-xs-4.col-sm-3.text-center.xs-pb-10
+                    a(href="#")
+                      img.img-responsive.img-circle(src='images/accesos-directos/presupuestos.png', alt='Presupuestos')
+                      span Presupuestos
+                  .clearfix.hidden-xs
+                  .col-xs-4.col-sm-3.text-center.xs-pb-10
+                    a(href="#")
+                      img.img-responsive.img-circle(src='images/accesos-directos/contratos.png', alt='Contratos')
+                      span Contratos
+                  .col-xs-4.col-sm-3.text-center.xs-pb-10
+                    a(href="#")
+                      img.img-responsive.img-circle(src='images/accesos-directos/smartnet.png', alt='Sueldos, Vacaciones')
+                      span Sueldos, Vacaciones
+                  .clearfix.hidden-sm.hidden-md.hidden-lg
+                  .col-xs-4.col-sm-3.text-center.xs-pb-10
+                    a(href="#")
+                      img.img-responsive.img-circle(src='images/accesos-directos/portal.png', alt='Portal')
+                      span Portal
+                  .col-xs-4.col-sm-3.text-center.xs-pb-10
+                    a(href="#")
+                      img.img-responsive.img-circle(src='images/accesos-directos/workplace.png', alt='Workplace')
+                      span Workplace
+                  .clearfix
+                //- li
+                //-   a(href='#') Action
+                //- li.divider(role='separator')
+                //- li
+                //-   a(href='#') Another action
+                //- li.divider(role='separator')
+                //- li
+                //-   a(href='#') Something else here
+          li
+            .dropdown
+              button#dropdownMenuNotification.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                i.fa.fa-bell-o.fa-2x(aria-hidden='true')
+                span.badge 4
+              ul.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuNotification')
+                li.dropdown-header Notificaciones Noticias
+                li.divider(role='separator')
+                li
+                  a(href="#")
+                    .container-fluid
+                      .row
+                        .col-xs-3
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                        .col-xs-9
+                          | Restricción de atención telefónica de IT Service
+                li.divider(role='separator')
+                li
+                  a(href="#")
+                    .container-fluid
+                      .row
+                        .col-xs-3
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                        .col-xs-9
+                          | Restricción de atención telefónica de IT Service
+                li.divider(role='separator')
+                li
+                  a(href="#")
+                    .container-fluid
+                      .row
+                        .col-xs-3
+                          img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+                        .col-xs-9
+                          | Restricción de atención telefónica de IT Service
+          li
+            //- .user-panel
+            //-   .image
+            //-     a(href="#")
+            //-       img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+            //-   .clearfix
+            .dropdown
+              button#dropdownMenuUser.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+              ul.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuUser')
+                li
+                  a.xs-p-10(href='#') Perfil
+                li.divider(role='separator')
+                li
+                  a.xs-p-10(href='#') Cerrar sesión
+          //- li
+          //-   a(href='#') Presupuestos
+          //- li
+          //-   a(href='#') Smartnet
+          //- li
+          //-   a(href='#') People Soft
+          //- li
+          //-   a(href='#') Solicitudes DI2D
+          //- li
+          //-   a(href='#') Contratos
+          //- li
+          //-   a(href='#') Seguridad Corporativa
       // /.navbar-top-links
+
       .navbar-default.sidebar(role='navigation')
-        .user-panel
-          .image
-            a(href="#")
-              img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
-          .info
-            p Alex Armando 
-            a.btn-block(href='login.html') Cerrar sesión
-            p.hidden-xs
-              | Lima Central Tower 
-              i.fa.fa-map-marker.fa-lg(aria-hidden='true')
-          .clearfix
-        br
+        //- .user-panel
+        //-   .image
+        //-     a(href="#")
+        //-       img.img-responsive.img-circle(src='images/user-160x160.jpg', alt='')
+        //-   .info
+        //-     p Alex Armando 
+        //-     a.btn-block(href='login.html') Cerrar sesión
+        //-     p.hidden-xs
+        //-       | Lima Central Tower 
+        //-       i.fa.fa-map-marker.fa-lg(aria-hidden='true')
+        //-   .clearfix
+        //- br
+        .navbar-brand.hidden-xs
+          img(src="images/logo-upc.png", alt="UPC", class="img-responsive")
         .sidebar-nav
           ul#side-menu.nav.in
             li.active
@@ -102,49 +210,6 @@ html.no-js(lang='es', ltr='ltr')
       // /.navbar-static-side
 
     #banner-wrapper
-      .direct-access
-        .wrapper-owl-carousel.pull-right
-          .owl-carousel.owl-theme
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Portal UPC
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Portal UPC
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Portal UPC
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Presupuestos
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Solicitudes DI2D
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Contratos
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Seguridad corporativa
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Workplace
-            div
-              a(href="#", target="_blank")
-                img(src="images/portal.png", alt="")
-                p Onbase
-        a.btn.pull-right(href="#")
-          img(src="images/icon-direct-access.png", alt="Accesos directos")
-        a.btn-close(href='#')
-
       block banner
 
     main#page-wrapper
